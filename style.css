@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --color-dark: #272727;
+    --color-light: #747474;
+    --color-red: #FF652F;
+    --color-yellow: #FFE400;
+    --color-green: #14A76C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-size: 1rem;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+.page-container {
+    width: 100%;
+    height: 100vh;
+}
+
+header ul {
+    width: 100%;
+    height: 10vh;
+    list-style-type: none;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header ul li {
+    padding: 0 1rem;
+}
+
+header ul li:nth-child(2) {
+    color: var(--color-green);
+}
+
+header ul li:nth-child(3) {
+    color: var(--color-yellow);
+}
+
+header ul li:nth-child(4) {
+    color: var(--color-red);
+}
+
+.display {
+    height: 70vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--color-yellow);
+}
+
+#cpu-svg {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50px;
+    background: linear-gradient(145deg, var(--color-light), var(--color-dark));
+    box-shadow:  2rem 2rem 6rem var(--color-dark),
+                -2rem -2rem 6rem var(--color-light);
+    margin: 1rem 3rem;
+}
+
+.btn svg {
+    fill: var(--color-light);
+}
+
+footer {
+    height: 20vh;
+    color: var(--color-yellow);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-game {
+    width: 10rem;
+    height: 5rem;
+    border-radius: 50px;
+    background: linear-gradient(145deg, var(--color-light), var(--color-dark));
+    box-shadow:  2rem 2rem 6rem var(--color-dark),
+                -2rem -2rem 6rem var(--color-light);
+    color : var(--color-yellow);
+    visibility: hidden;
+    margin: 0 5rem;
+}
+
+@media screen and (orientation: landscape) and (max-width: 1200px) {
+    .display {
+        width: 100%;
+    }
+
+    .btn, #cpu-svg {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .btn svg {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .display {
+        width: 100%;
+    }
+
+    .btn, #cpu-svg {
+        width: 11.5rem;
+        height: 11.5rem;
+    }
+
+    .btn svg {
+        width: 65%;
+        height: 65%;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px) {
+    header ul {
+        font-size: 1.5rem;
+    }
+
+    .display {
+        justify-content: space-around;
+    }
+
+    .btn, #cpu-svg {
+        width: 8rem;
+        height: 8rem;
+        margin: 1rem 1rem;
+    }
+
+    .btn svg {
+        width: 50%;
+        height: 50%;
+        border-radius: 1px;
+    }
+
+    h1, #footer {
+        font-size: 2rem;
+    }
+
+    
+}
+
+@media only screen and (orientation: landscape) and (max-height: 500px) {
+    header ul {
+        font-size: 1.5rem;
+    }
+
+    .display {
+        justify-content: space-around;
+    }
+
+    .btn, #cpu-svg {
+        width: 8rem;
+        height: 8rem;
+        margin: 1rem 1rem;
+    }
+
+    .btn svg {
+        width: 50%;
+        height: 50%;
+        border-radius: 1px;
+    }
+
+    h1, #footer {
+        font-size: 2rem;
+    }
+
+}
